@@ -1,4 +1,4 @@
-# A Blank PhoneGap App
+# A Password Generator developed using PhoneGap App
 
 ## Usage
 
