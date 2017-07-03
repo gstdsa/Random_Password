@@ -18,7 +18,15 @@
 	var length=document.getElementById('passIn').value;   //Fetching length from input box
 	
 	
-    var alpha = "abcdefghijklmnopqrstuvwxyz";
+    
+
+	if(length==0||length==1||length==2||length==3||length==4||length==5||length==6||length==7)
+	{
+	var ps="Create a secure PASSWORD please!!Atleast 8 Character long;"
+	}
+	else if(length<33)
+	{
+	var alpha = "abcdefghijklmnopqrstuvwxyz";
     var caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numeric = "0123456789";
     var special = "!$^&*-=+_?";
@@ -27,8 +35,9 @@
 
     var password = "";
     var passwordArray = Array(length);
-
-    for (i = 0; i < length; i++) {
+	
+	
+	for (i = 0; i < length; i++) {
         var currentOption = options[Math.floor(Math.random() * options.length)];
         var randomChar = currentOption.charAt(Math.floor(Math.random() * currentOption.length));
         password += randomChar;
@@ -66,6 +75,11 @@
     }
 
     var ps= password;
+	}
+	else
+	{
+	var ps="Limit Exceeded!!Not one need that!!";
+	}
 	
 	document.getElementById('result').innerHTML=(ps);   //Printing ps inside div with id 'result'
 }
@@ -93,13 +107,18 @@ document.getElementById('text').innerHTML=(txt);       //Printing txt inside div
 	#bl{color:red;font-family:verdana;font-size:24px;}   /* Body text font */
 	.bk{color:cyan;font-family:verdana;font-size:24px;}  /* Print message font */
 	.bf{color:yellow;font-family:verdana;font-size:24px;
-	padding: 25px;
+	padding: 40px;
 	} /* Password print font */
     #cr{color:teal;font-size:13px;}
 	
 	
+	.body{
+	background-image: url("matrix.png");
+	}
+	
 
-	#envelope{                                           
+
+/*	#envelope{                                           
 	width: 75%;
 	
 	padding:10px 0;
@@ -107,8 +126,8 @@ document.getElementById('text').innerHTML=(txt);       //Printing txt inside div
 	border-radius:10px;
 	overflow:hidden;
 	
-	background-image: url("matrix.png");
-} 
+	
+}   */
 
 .bttn {                               
   display: inline-block;
@@ -127,25 +146,24 @@ document.getElementById('text').innerHTML=(txt);       //Printing txt inside div
   font-size: 13px;
 }
 
-.bttn:hover {background-color: #3e8e41}               
+.bttn:hover {
+background-color: #3e8e41}               
 
 .bttn:active {
   background-color: #7a42f4;
-
-   
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-}
+
 
 
 	}
 	</style>
-    <body bgcolor="black">
+    <body class="body" bgcolor="black">
         <script type="text/javascript" src="cordova.js"></script>      <!--DON'T REMOVE THIS LINE-->
-		<br><br><br>
+		<br><br>
 		<center>
-		<div id="envelope">
+		<div>
 		<center>
 		<h3 id="cl"> RANDOM PASS</h3>
 		</center>
@@ -157,25 +175,24 @@ document.getElementById('text').innerHTML=(txt);       //Printing txt inside div
 		<input id="passIn" type="number" />                           <!--INPUT NUMBER BOX-->
 		</center>
 		<br>
-		<br>
+		
 		<center>
 		<button class="bttn" id="btnGen">Generate</button>             <!--GENERATE button-->
 		</center>
 		<br>
 	<br>
-	<br>
+
 <center><div class="bk" id="text"></div>                           <!-- div displaying "YOUR PASSWORD IS " text-->
 </center>
 		
 <center><div class="bf" id="result"></div>                        <!-- div displaying generated passwords -->
 </center>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 	
 		</div>
 		</center>  
-		<br>
-		<br>
+	
 	<p align=right id="cr">Created by Gautham Prakash<p>
     </body>
 </html>
