@@ -38,7 +38,7 @@
         <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
         <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
-		<splash src="splash.png">
+		<splash src="splash.png" />
         <splash density="land-ldpi" src="www/res/splash/zldpi/screen.png" />
         <splash density="land-mdpi" src="www/res/splash/zmdpi/screen.png" />
         <splash density="land-hdpi" src="www/res/splash/zhdpi/screen.png" />
