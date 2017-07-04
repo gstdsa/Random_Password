@@ -8,9 +8,9 @@
        
     </author>
     <content src="index.html" />
-	<preference name="SplashScreenDelay" value="5000" />
 	<preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+	<preference name="SplashScreenDelay" value="5000" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
@@ -39,7 +39,6 @@
         <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
 		<splash src="splash.png">
-		<
         <splash density="land-ldpi" src="www/res/splash/zldpi/screen.png" />
         <splash density="land-mdpi" src="www/res/splash/zmdpi/screen.png" />
         <splash density="land-hdpi" src="www/res/splash/zhdpi/screen.png" />
